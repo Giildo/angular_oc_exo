@@ -1,0 +1,15 @@
+<div [ngClass]="{'card': true,'card-success': post.loveIt > 0, 'card-danger': post.loveIt < 0}">
+  <header class="card-header">
+    <h2>{{ post.title }}</h2>
+    <p>{{ post.createdAt | date:'dd-MM-yyyy, HH:mm ' }}</p>
+  </header>
+  <section>
+    <p>{{ post.content }}</p>
+  </section>
+  <button class="btn btn-success"
+          (click)="loveIt()">Love it
+  </button>
+  <button class="btn btn-danger"
+          (click)="doNotLoveIt()">Don't love it
+  </button>
+</div>
